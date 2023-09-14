@@ -1,0 +1,54 @@
+{
+    "movies": [
+      {
+        "id": 1,
+        "title": "Top Boy",
+        "backdrop_path": "url(https://images.immediate.co.uk/production/volatile/sites/3/2023/08/Top-Boy-season-5-release-date-f435b51.jpg?quality=90&resize=980,654)",
+        "imdb_rating": "8.4/10",
+        "rotten_tomatoes_rating": "97%",
+        "description": "Two London drug dealers ply their lucrative trade at a public housing estate in East London.",
+        "href": "https://m.imdb.com/video/vi58639385/?playlistId=tt1830379&ref_=tt_ov_vi"
+
+      },
+      {
+        "id": 2,
+        "title": "Queen Charlotte: A Bridgerton Story",
+        "backdrop_path": "url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/202305/339098464_766265984806249_2741960021934220139_n-sixteen_nine.jpg?VersionId=h.EeID3NHb6klkIQjWlrhtgSogEngm7G&size=690:388)",
+        "imdb_rating": "7.4/10",
+        "rotten_tomatoes_rating": "94%",
+        "description": "Betrothed against her will to King George, young Charlotte arrives in London on her wedding day and faces scrutiny from the monarch's cunning mother.",
+        "href": "https://m.imdb.com/video/vi2939143193/?playlistId=tt14661396&ref_=tt_ov_vi"
+
+      },
+      {
+        "id": 3,
+        "title": "Sex Education",
+        "backdrop_path": "url(https://images.thedirect.com/media/article_full/netflix-education.jpg)",
+        "imdb_rating": "8.3/10",
+        "rotten_tomatoes_rating": "95%",
+        "description": "A teenage boy with a sex therapist mother teams up with a high school classmate to set up an underground sex therapy clinic at school.",
+        "href": "https://m.imdb.com/video/vi2213070617/?playlistId=tt7767422&ref_=tt_ov_vi"
+
+      },
+      {
+        "id": 4,
+        "title": "Oppenheimer",
+        "backdrop_path": "url(https://cdn.mos.cms.futurecdn.net/cCPNy2QiwA2Hf5aRdjnrte.jpg)",
+        "imdb_rating": "8.6/10",
+        "rotten_tomatoes_rating": "93%",
+        "description": "The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb.",
+        "href": "https://m.imdb.com/video/vi954713881/?playlistId=tt9663764&ref_=tt_ov_vi"
+
+      },
+      {
+        "id": 5,
+        "title": "You Are So Not Invited to My Bat Mitzvah",
+        "backdrop_path": "url(https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQefeQgdm0uKdeDHQcz7hMl0ekuNrqqXXqgGaLkj-BQJhHRGjOHNq9BbYE0OLy2OMKz6mwVNw5f8gTriApAII2vYIy_hEpiSvFuQun56sKuGRDP4tTTO5r_UQ_XfQm0twTHYpKSmS7UwtP6nO-UBdD9Pg4rQ.jpg?r=959",
+        "imdb_rating": "6/10",
+        "rotten_tomatoes_rating": "92%",
+        "description": "Stacy and Lydia are BFFs who've always dreamed about having epic Bat Mitzvahs. However, things start to go comically awry when a popular boy and middle school drama threatens their friendship and their rite of passage.",
+        "href": "https://m.imdb.com/video/vi2274019097/?playlistId=tt21276878&ref_=tt_ov_vi"
+      }
+    ]
+  }
+  
