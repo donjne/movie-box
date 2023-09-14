@@ -12,7 +12,7 @@ function entered() {
     <>
       <Head>
         <title>Movie Box</title>
-        <meta name="description" content="The Ultimate Finance Tracking App" />
+        <meta name="description" content="The ultimate movie platform" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

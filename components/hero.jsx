@@ -10,6 +10,7 @@ import imdb from '../public/imdb.svg';
 import tomato from '../public/tomato.svg';
 import play from '../public/Play.svg'
 import Link from 'next/link';
+import Head from "next/head";
 
 function Hero() {
   const images = movieData.movies.map((movie) => movie.backdrop_path);
@@ -32,6 +33,12 @@ function Hero() {
   };
 
   return (
+    <>
+      <Head>
+        <title>Movie Box</title>
+        <meta name="description" content="The ultimate movie platform" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
     <div className="relative h-screen text-white">
       <motion.div
         key={currentImageIndex}
@@ -144,6 +151,7 @@ function Hero() {
         ))}
       </div>
     </div>
+    </>
   );
 }
 
