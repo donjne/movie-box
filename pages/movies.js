@@ -11,7 +11,6 @@ import tickets from "../public/Two-Tickets.svg";
 
 function movies() {
   const [movieDetails, setMovieDetails] = useState([]);
-  const [topMovies, setTopMovies] = useState([]);
 
 
   useEffect(() => {
@@ -32,30 +31,6 @@ function movies() {
           imdb_id: movie.id, // inserting imdb_id trial
         }));
         setMovieDetails(movieDetails);
-      })
-      .catch((error) => {
-        console.error("Error fetching movie details:", error);
-      });
-  }, []);
-
-  useEffect(() => {
-    // Fetch movie details using the TMDb API (replace with your API key)
-    const apiKey = process.env.NEXT_PUBLIC_TMDB_API_KEY;
-    const baseUrl = "https://api.themoviedb.org/3";
-
-    axios
-      .get(`${baseUrl}/movie/top_rated`, {
-        params: {
-          api_key: apiKey,
-          language: "en-US",
-        },
-      })
-      .then((response) => {
-        const topMovies = response.data.results.slice(0, 3).map((movie) => ({
-          ...movie,
-          imdb_id: movie.id, // inserting imdb_id trial
-        }));
-        setTopMovies(topMovies);
       })
       .catch((error) => {
         console.error("Error fetching movie details:", error);
@@ -198,7 +173,7 @@ function movies() {
                   {/* Movie Posters Grid */}
                   <div className="grid grid-cols-3 gap-4 mt-2">
                     {/* Use slice to ensure only the first 3 movies are displayed */}
-                    {topMovies.map((movie) => (
+                    {movieDetails.map((movie) => (
                       <div className="relative group" key={movie.id}>
                         <img
                           src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
