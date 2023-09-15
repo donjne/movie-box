@@ -1,13 +1,16 @@
 // Card.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import ratings from './movieRatings.json'
+import Link from 'next/link';
 
 const Card = () => {
   const [topMovies, setTopMovies] = useState([]);
+  const [movieRatings, setMovieRatings] = useState({});
 
   useEffect(() => {
     // Define your TMDB API key and base URL
-    const apiKey = 'YOUR_API_KEY';
+    const apiKey = process.env.NEXT_PUBLIC_TMDB_API_KEY;
     const baseUrl = 'https://api.themoviedb.org/3';
 
     // Fetch the top-rated movies
@@ -21,18 +24,31 @@ const Card = () => {
       })
       .then((response) => {
         // Get the top 10 movies
-        const top10Movies = response.data.results.slice(0, 10);
-        setTopMovies(top10Movies);
+        const top10Movies = response.data.results
+        .slice(0, 10)
+        .map((movie) => ({
+          ...movie,
+          imdb_id: movie.id, // inserting imdb_id trial
+        }));
+      setTopMovies(top10Movies);
       })
       .catch((error) => {
         console.error('Error fetching top movies:', error);
       });
+
+      
+    // Fetch ratings from your JSON file (you can use axios or fetch)
+    // Example using axios
+      setMovieRatings(ratings);
   }, []);
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <div className='lg:flex justify-between items-center'>
       <h1 className="text-3xl font-bold mb-6">Top 10 Movies</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <Link href="/more" className='text-red-700 text-lg'>See More &gt;</Link>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-20">
         {topMovies.map((movie) => (
           <div
             key={movie.id}
@@ -48,7 +64,13 @@ const Card = () => {
               <p className="text-sm text-gray-600">
                 Release Date: {movie.release_date}
               </p>
-              {/* You can add IMDb and Rotten Tomatoes ratings here if available */}
+              {/* Display IMDb and Rotten Tomatoes ratings from state */}
+              {/* <p className="text-sm">
+              IMDb: {movieRatings[movie.imdb_id]?.imdb_rating || 'N/A'}
+              </p>
+              <p className="text-sm">
+              Rotten Tomatoes: {movieRatings[movie.imdb_id]?.rotten_tomatoes_rating || 'N/A'}
+              </p> */}
             </div>
           </div>
         ))}

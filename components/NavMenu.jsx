@@ -7,7 +7,7 @@ import movies from '../public/Movie-Projector.svg';
 import tvshow from '../public/TV-Show.svg'
 
 const NavItem = ({ name, icon, onClick, isActive }) => {
-  let route = "/entered";
+  let route = "/movies";
   if (name === "Home") {
     route = "/home";
   } else if (name === "Movies") {
