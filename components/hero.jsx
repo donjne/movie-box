@@ -90,6 +90,7 @@ function Hero() {
             backgroundImage: `${images[currentImageIndex]}`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            dataTestId: "movie-poster"
           }}
         />
         {/* Content */}
@@ -139,7 +140,7 @@ function Hero() {
           {/* Movie Details */}
           <div className="mb-2">
             {/* Movie Title */}
-            <h1 className="text-4xl font-semibold mb-2 text-white">
+            <h1 className="text-4xl font-semibold mb-2 text-white" data-testid="movie-title">
               {movieData.movies[currentImageIndex].title}
             </h1>
             <div className="flex items-center gap-6">
@@ -149,6 +150,7 @@ function Hero() {
                   src={imdb} // Replace with your IMDb logo image path
                   alt="IMDb Logo"
                   className="w-10 h-10 mx-2"
+                  
                 />
                 <p className="text-xl">
                   {movieData.movies[currentImageIndex].imdb_rating}
@@ -219,10 +221,11 @@ function Hero() {
                     src={`https://image.tmdb.org/t/p/w500${result.poster_path}`}
                     alt={result.title}
                     className="w-full h-48 object-cover"
+                    data-testid="movie-poster"
                   />
                   <div className="px-4 py-2">
                     <h2 className="text-lg font-semibold">{result.title}</h2>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-600" data-testid="movie-release-date">
                       Release Date: {result.release_date}
                     </p>
                   </div>

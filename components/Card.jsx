@@ -53,15 +53,17 @@ const Card = () => {
           <div
             key={movie.id}
             className="bg-white rounded-lg overflow-hidden shadow-md"
+            data-testid="movie-id"
           >
             <img
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.title}
               className="w-full h-48 object-cover"
+              data-testid="movie-poster"
             />
             <div className="px-4 py-2">
-              <h2 className="text-lg font-semibold">{movie.title}</h2>
-              <p className="text-sm text-gray-600">
+              <h2 className="text-lg font-semibold" data-testid="movie-title">{movie.title}</h2>
+              <p className="text-sm text-gray-600" data-testid="movie-release-date">
                 Release Date: {movie.release_date}
               </p>
               {/* Display IMDb and Rotten Tomatoes ratings from state */}
