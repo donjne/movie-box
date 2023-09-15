@@ -9,7 +9,7 @@ import LogoJPG from "../public/Logo.png";
 import { Logout } from "../components/Logout";
 import tickets from "../public/Two-Tickets.svg";
 
-export default function movies() {
+function Movies() {
   const [movieDetails, setMovieDetails] = useState([]);
 
 
@@ -204,3 +204,5 @@ export default function movies() {
     </>
   );
 }
+
+export default Movies;
